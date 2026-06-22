@@ -18,7 +18,7 @@ repos:
       - id: trailing-whitespace
         args: ["--markdown-linebreak-ext=md"]
   - repo: https://github.com/homebysix/pre-commit-macadmin
-    rev: 82866b39909c9b2d75b2aefe27f2b6fb2bf7149c  # frozen: v1.22.1
+    rev: 50336b2df057db6c6b3421e24d5f49f25139e27d  # frozen: v1.25.0
     hooks:
       - id: check-plists
       - id: check-autopkg-recipes
