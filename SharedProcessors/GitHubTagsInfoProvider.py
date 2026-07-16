@@ -180,11 +180,6 @@ class GitHubTagsInfoProvider(Processor):
         else:
             resolved_tag = self.most_recent_tag(github, tags)
 
-        self.output(
-            f"Resolved {resolved_tag['name']} ({resolved_tag['_commit_date']}) -> {self.env['url']}"
-        )
-        self.output(resolved_tag, 2)
-
         self.env["tag_name"] = resolved_tag["name"]
         self.env["url"] = (
             f"{github.url}/repos/{github_repo}/git/refs/tags/{resolved_tag['name']}"
@@ -194,6 +189,11 @@ class GitHubTagsInfoProvider(Processor):
         self.env["commit_sha"] = resolved_tag["commit"]["sha"]
         self.env["commit_date"] = resolved_tag["_commit_date"]
         self.env["node_id"] = resolved_tag["node_id"]
+
+        self.output(
+            f"Resolved {resolved_tag['name']} ({resolved_tag['_commit_date']}) -> {self.env['url']}"
+        )
+        self.output(resolved_tag, 2)
 
 
 if __name__ == "__main__":
