@@ -1,5 +1,5 @@
 Description: Recipe stub for any Processors in this directory.
-Identifier: com.github.flywire-recipes.SharedProcessors
+Identifier: com.github.flywire.SharedProcessors
 Input: {}
 MinimumVersion: "2.3"
 Process: []
