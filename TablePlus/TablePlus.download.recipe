@@ -9,7 +9,7 @@
 	<key>Input</key>
 	<dict>
 		<key>CHECK_FILESIZE_ONLY</key>
-		<string>false</string>
+		<false/>
 		<key>DOWNLOAD_URL</key>
 		<string>https://tableplus.com/release/osx/tableplus_latest</string>
 		<key>NAME</key>
